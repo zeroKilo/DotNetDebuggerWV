@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11C16DB2-CC85-4173-BF1A-C7710E286523}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DotNetDebuggerWV</RootNamespace>
+    <AssemblyName>DotNetDebuggerWV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BuildResult\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ms\corapi\AppDomain.cs" />
+    <Compile Include="ms\corapi\AppDomainEnumerator.cs" />
+    <Compile Include="ms\corapi\Assembly.cs" />
+    <Compile Include="ms\corapi\AssemblyEnumerator.cs" />
+    <Compile Include="ms\corapi\Breakpoint.cs" />
+    <Compile Include="ms\corapi\BreakpointEnumerator.cs" />
+    <Compile Include="ms\corapi\ChainEnumerator.cs" />
+    <Compile Include="ms\corapi\Class.cs" />
+    <Compile Include="ms\corapi\Constants.cs" />
+    <Compile Include="ms\corapi\Controller.cs" />
+    <Compile Include="ms\corapi\CorMetadata.cs" />
+    <Compile Include="ms\corapi\CorPublish.cs" />
+    <Compile Include="ms\corapi\Debugger.cs" />
+    <Compile Include="ms\corapi\ErrorInfoEnumerator.cs" />
+    <Compile Include="ms\corapi\Eval.cs" />
+    <Compile Include="ms\corapi\FunctionBreakpoint.cs" />
+    <Compile Include="ms\corapi\HResults.cs" />
+    <Compile Include="ms\corapi\IDiaReadExeAtRVACallback.cs" />
+    <Compile Include="ms\corapi\IldbSymbols.cs" />
+    <Compile Include="ms\corapi\ISymBinder2.cs" />
+    <Compile Include="ms\corapi\ISymConstant.cs" />
+    <Compile Include="ms\corapi\ISymEncMethod.cs" />
+    <Compile Include="ms\corapi\ISymENCUpdate.cs" />
+    <Compile Include="ms\corapi\ISymReader2.cs" />
+    <Compile Include="ms\corapi\ISymScope2.cs" />
+    <Compile Include="ms\corapi\ISymSearchInfo.cs" />
+    <Compile Include="ms\corapi\ISymWriter2.cs" />
+    <Compile Include="ms\corapi\MetadataFieldInfo.cs" />
+    <Compile Include="ms\corapi\MetadataLocator.cs" />
+    <Compile Include="ms\corapi\MetadataParameterInfo.cs" />
+    <Compile Include="ms\corapi\MetadataType.cs" />
+    <Compile Include="ms\corapi\Module.cs" />
+    <Compile Include="ms\corapi\ModuleBreakpoint.cs" />
+    <Compile Include="ms\corapi\ModuleEnumerator.cs" />
+    <Compile Include="ms\corapi\ModuleRVAReader.cs" />
+    <Compile Include="ms\corapi\ObjectEnumerator.cs" />
+    <Compile Include="ms\corapi\Process.cs" />
+    <Compile Include="ms\corapi\ProcessEnumerator.cs" />
+    <Compile Include="ms\corapi\RegisterSet.cs" />
+    <Compile Include="ms\corapi\RemoteTarget.cs" />
+    <Compile Include="ms\corapi\StackWalk.cs" />
+    <Compile Include="ms\corapi\Stepper.cs" />
+    <Compile Include="ms\corapi\StepperEnumerator.cs" />
+    <Compile Include="ms\corapi\SymAccess.cs" />
+    <Compile Include="ms\corapi\symbinder.cs" />
+    <Compile Include="ms\corapi\SymConstant.cs" />
+    <Compile Include="ms\corapi\SymDocument.cs" />
+    <Compile Include="ms\corapi\SymDocumentWriter.cs" />
+    <Compile Include="ms\corapi\symmethod.cs" />
+    <Compile Include="ms\corapi\SymNamespace.cs" />
+    <Compile Include="ms\corapi\SymReader.cs" />
+    <Compile Include="ms\corapi\SymScope.cs" />
+    <Compile Include="ms\corapi\SymSearchInfo.cs" />
+    <Compile Include="ms\corapi\SymSearchPolicyAttributes.cs" />
+    <Compile Include="ms\corapi\symvariable.cs" />
+    <Compile Include="ms\corapi\SymWriter.cs" />
+    <Compile Include="ms\corapi\Thread.cs" />
+    <Compile Include="ms\corapi\ThreadEnumerator.cs" />
+    <Compile Include="ms\corapi\Type.cs" />
+    <Compile Include="ms\corapi\TypeEnumerator.cs" />
+    <Compile Include="ms\corapi\utility.cs" />
+    <Compile Include="ms\corapi\Value.cs" />
+    <Compile Include="ms\corapi\ValueBreakpoint.cs" />
+    <Compile Include="ms\corapi\WrapperBase.cs" />
+    <Compile Include="ms\mdbgeng\Appdomain.cs" />
+    <Compile Include="ms\mdbgeng\Breakpoint.cs" />
+    <Compile Include="ms\mdbgeng\DebuggerVar.cs" />
+    <Compile Include="ms\mdbgeng\Engine.cs" />
+    <Compile Include="ms\mdbgeng\Exception.cs" />
+    <Compile Include="ms\mdbgeng\FrameFactory.cs" />
+    <Compile Include="ms\mdbgeng\Function.cs" />
+    <Compile Include="ms\mdbgeng\InternalUtil.cs" />
+    <Compile Include="ms\mdbgeng\LibraryProvider.cs" />
+    <Compile Include="ms\mdbgeng\Module.cs" />
+    <Compile Include="ms\mdbgeng\Process.cs" />
+    <Compile Include="ms\mdbgeng\Stepper.cs" />
+    <Compile Include="ms\mdbgeng\StopReason.cs" />
+    <Compile Include="ms\mdbgeng\Thread.cs" />
+    <Compile Include="ms\mdbgeng\Value.cs" />
+    <Compile Include="ms\mdbgeng\WrapperWrapperBase.cs" />
+    <Compile Include="ms\mdbgext\ArgumentParser.cs" />
+    <Compile Include="ms\mdbgext\AttributeDefinedCommand.cs" />
+    <Compile Include="ms\mdbgext\MDbgExt.cs" />
+    <Compile Include="ms\mdbgext\StopOptionPolicy.cs" />
+    <Compile Include="ms\mdbg\Mdbg.cs" />
+    <Compile Include="ms\mdbg\mdbgCommands.cs" />
+    <Compile Include="ms\mdbg\SourceFile.cs" />
+    <Compile Include="ms\NativeDebugWrappers\amd64Context.cs" />
+    <Compile Include="ms\NativeDebugWrappers\context.cs" />
+    <Compile Include="ms\NativeDebugWrappers\DumpReader.cs" />
+    <Compile Include="ms\NativeDebugWrappers\ia64Context.cs" />
+    <Compile Include="ms\NativeDebugWrappers\NativeImports.cs" />
+    <Compile Include="ms\NativeDebugWrappers\PEReader.cs" />
+    <Compile Include="ms\NativeDebugWrappers\x86Context.cs" />
+    <Compile Include="ms\raw\ICorDebugWrappers.cs" />
+    <Compile Include="ms\raw\ICorPublishWrappers.cs" />
+    <Compile Include="ms\raw\IMetadataImport.cs" />
+    <Compile Include="ms\raw\WindowsImports.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ms\NativeDebugWrappers\mdbg.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
