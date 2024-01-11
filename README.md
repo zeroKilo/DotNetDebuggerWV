@@ -1,2 +1,2 @@
 # DotNetDebuggerWV
- Starts and debugs .Net Process and catches last exceptions
+ Starts and debugs .Net process and catches last exceptions
